@@ -16,4 +16,12 @@ export class SaludoComponent implements OnInit {
   ngOnInit(): void {
     console.log('SaludoComponent ngOnInit');
   }
+
+  /*
+  * Ejemplo para controlar evento de tipo click
+  */
+
+  alertaSaludo(): void {
+    alert(`Hola ${this.name}. Alerta disparada por evento click`);
+  }
 }
