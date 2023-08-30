@@ -304,6 +304,11 @@
   <span>Prueba con Angular: {{ title }}</span>
 </div>
 
+
 <div class="content" role="main">
-  <app-saludo />
+
+  <input type="text" placeholder="User name"/>
+
+  <app-saludo [name]="user"></app-saludo>
+  
 </div>
