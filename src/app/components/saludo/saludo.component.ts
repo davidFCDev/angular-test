@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-saludo',
@@ -6,22 +6,22 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./saludo.component.css'],
 })
 export class SaludoComponent implements OnInit {
-
+  @Output() msjEmitter: EventEmitter<string> = new EventEmitter<string>();
   @Input() name: string = 'Anónimo';
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit(): void {
     console.log('SaludoComponent ngOnInit');
   }
 
   /*
-  * Ejemplo para controlar evento de tipo click
-  */
+   * Ejemplo para controlar evento de tipo click en el DOM y enviar un texto a componente padre
+   */
 
-  alertaSaludo(): void {
-    alert(`Hola ${this.name}. Alerta disparada por evento click`);
+  sendMsj(): void {
+    this.msjEmitter.emit(
+      `Hola ${this.name}. Alerta disparada por evento click`
+    );
   }
 }

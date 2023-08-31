@@ -1,3 +1,7 @@
 <h1>Hola, {{ name }} !</h1>
 
-<button id="emit-alert" (click)="alertaSaludo()">Mostrar alerta</button>
+<h3 id="user" [innerText]="name">
+  <!-- no indicamos nada en las etiquetas-->
+</h3>
+
+<button id="emit-alert" (click)="sendMsj()">Mostrar alerta</button>
