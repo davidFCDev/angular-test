@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'HolaMundo';
   user = '@paco';
+
+  // Se ejecueta cuando en el hijo se pulse el botón
+  getMsj(event: string): void {
+    alert(event);
+  }
 }
