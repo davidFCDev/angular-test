@@ -17,6 +17,12 @@ export class SaludoComponent implements OnInit, OnDestroy, OnChanges {
   @Output() msjEmitter: EventEmitter<string> = new EventEmitter<string>();
   @Input() name: string = 'Anónimo';
 
+  myStyle: object = {
+    color: 'cyan',
+    fontSize: '20px',
+    fontWeight: 'bold',
+  };
+
   constructor() {}
 
   ngOnInit(): void {
