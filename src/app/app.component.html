@@ -310,6 +310,8 @@
   <input type="text" placeholder="User name" [(ngModel)]="user"/>
 
   <app-saludo [name]="user" (msjEmitter)="getMsj($event)"></app-saludo>
+  <app-saludo (msjEmitter)="getMsj($event)"></app-saludo>
+
 
 
 </div>
