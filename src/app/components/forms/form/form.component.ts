@@ -11,13 +11,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class FormComponent implements OnInit {
 
   //Definimos el formulario
-  myForm: FormGroup | undefined;
+  myForm: FormGroup = new FormGroup({});
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
 
-    //Iniciamos el formulario y sus valores por defecto
+    // Iniciamos el formulario y sus valores por defecto
     this.myForm = this.formBuilder.group({
       name: [''],
       surname: [''],
@@ -25,6 +25,9 @@ export class FormComponent implements OnInit {
       phone: [''],
       adress: [''],
     });
+
+    // Nos suscribimos a los cambios del formulario
+    this.myForm.valueChanges.subscribe(console.log);
   }
 
 }
