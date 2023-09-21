@@ -6,21 +6,15 @@
   <p>{{ myForm.value | json }}</p>
 
   <!-- Campos del form -->
-  <div [ngStyle]="{ display: 'flex', flexDirection: 'column' }">
-    <mat-form-field>
-      <input matInput placeholder="Name" formControlName="name" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Surname" formControlName="surname" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Email" formControlName="email" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Phone" formControlName="phone" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Adress" formControlName="adress" />
-    </mat-form-field>
+  <div class="form">
+    <input matInput placeholder="Name" formControlName="name" />
+
+    <input matInput placeholder="Surname" formControlName="surname" />
+
+    <input matInput placeholder="Email" formControlName="email" />
+
+    <input matInput placeholder="Phone" formControlName="phone" />
+
+    <input matInput placeholder="Adress" formControlName="adress" />
   </div>
 </form>
