@@ -10,6 +10,7 @@ import { AnidatedFormComponent } from './components/forms/anidated-form/anidated
 import { ArrayFormComponent } from './components/forms/array-form/array-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ValidatedFormComponent } from './components/forms/validated-form/validated-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ValidatedFormComponent } from './components/forms/validated-form/valida
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
