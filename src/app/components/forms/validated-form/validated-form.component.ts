@@ -16,9 +16,9 @@ export class ValidatedFormComponent implements OnInit {
 
     this.myValidatedForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
-      message: ['', Validators.required]
+      surname: '',
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      age: ['', Validators.compose([Validators.required, Validators.min(18), Validators.max(65)])],
     });
 
   }
