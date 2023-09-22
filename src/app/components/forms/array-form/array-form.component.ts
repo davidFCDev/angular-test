@@ -20,7 +20,18 @@ export class ArrayFormComponent implements OnInit {
     });
   }
 
+  // Método para obtener la lista de teléfonos
   get phonesFormArray(): FormArray {
     return this.myArrayForm.get('phones') as FormArray;
   }
+
+  // Método para agregar un teléfono a la lista
+  addPhone() {
+    const newPhone = this.formBuilder.group({
+      prefix: '',
+      number: '',
+    });
+    this.phonesFormArray.push(newPhone);
+  }
+
 }
