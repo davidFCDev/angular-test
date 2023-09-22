@@ -14,7 +14,6 @@ export class AnidatedFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-
     //Agrupación para teléfono
     const fixedPhone = this.formBuilder.group({
       prefix: '',
@@ -27,8 +26,6 @@ export class AnidatedFormComponent implements OnInit {
 
     // Agrupacion del formulario
     this.myAnidatedForm = this.formBuilder.group({
-      name: '',
-      surname: '',
       fixedPhone: fixedPhone,
       mobilePhone: mobilePhone,
     });

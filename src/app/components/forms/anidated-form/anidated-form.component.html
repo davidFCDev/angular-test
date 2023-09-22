@@ -1,1 +1,14 @@
-<p>anidated-form works!</p>
+<form [formGroup]="myAnidatedForm">
+  <h3>Live Data Form:</h3>
+  <p>{{ myAnidatedForm.value | json }}</p>
+
+  <h4>Fixed phone:</h4>
+  <div formGroupName="fixedPhone">
+    <input type="text" formControlName="prefix" placeholder="Prefix" />
+    <input type="text" formControlName="number" placeholder="Number" />
+  </div>
+  <div formGroupName="mobilePhone">
+    <input type="text" formControlName="prefix" placeholder="Prefix" />
+    <input type="text" formControlName="number" placeholder="Number" />
+  </div>
+</form>
