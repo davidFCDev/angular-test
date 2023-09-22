@@ -34,4 +34,9 @@ export class ArrayFormComponent implements OnInit {
     this.phonesFormArray.push(newPhone);
   }
 
+  // Método para eliminar un teléfono de la lista
+  deletePhone(index: number) {
+    this.phonesFormArray.removeAt(index);
+  }
+
 }
