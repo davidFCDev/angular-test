@@ -1,1 +1,32 @@
-<p>validated-form works!</p>
+<form [formGroup]="myValidatedForm" (submit)="sendForm()">
+  <!-- Campos del formulario - Mensajes de Error por validación -->
+  <div>
+    <input type="text" formControlName="name" placeholder="Name" />
+    <div *ngIf="name?.errors?.['required'] && name?.touched">
+      <p>Name is required</p>
+    </div>
+  </div>
+  <div>
+    <input type="text" formControlName="surname" placeholder="Surname" />
+  </div>
+  <div>
+    <input type="text" formControlName="email" placeholder="Email" />
+    <div *ngIf="email?.errors?.['required'] && email?.touched">
+      <p>Email is required</p>
+    </div>
+    <div *ngIf="email?.errors?.['email'] && email?.touched">
+      <p>Email is not valid</p>
+    </div>
+  </div>
+  <div>
+    <input type="number" formControlName="age" placeholder="Age" />
+    <div *ngIf="age?.errors?.['required'] && age?.touched">
+      <p>Age is required</p>
+    </div>
+    <div *ngIf="age?.errors?.['min'] && age?.touched">
+      <p>Age must be greater than 18</p>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="myValidatedForm.invalid">Send</button>
+</form>
