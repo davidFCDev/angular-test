@@ -11,6 +11,7 @@ import { ArrayFormComponent } from './components/forms/array-form/array-form.com
 import { HttpClientModule } from '@angular/common/http';
 import { ValidatedFormComponent } from './components/forms/validated-form/validated-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ExamplePipesComponent } from './components/example-pipes/example-pipes.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AnidatedFormComponent,
     ArrayFormComponent,
     ValidatedFormComponent,
+    ExamplePipesComponent,
   ],
   imports: [
     BrowserModule,
