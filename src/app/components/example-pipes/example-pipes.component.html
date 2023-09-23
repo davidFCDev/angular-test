@@ -9,4 +9,4 @@
 <p>My birthday is {{ dob | date : "long" }}</p>
 
 <p>My birthday is {{ dob | date : dateFormat }}</p>
-<button (click)="changeDate()">Change format to {{ !change ? 'Short' : 'Full' }} </button>
+<button (click)="changeFormat()">Change format to {{ !change ? 'Short' : 'Full' }} </button>
