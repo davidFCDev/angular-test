@@ -25,6 +25,18 @@ export class ValidatedFormComponent implements OnInit {
 
   }
 
+  get name() { return this.myValidatedForm.get('name'); }
+
+  get surname() { return this.myValidatedForm.get('surname'); }
+
+  get email() { return this.myValidatedForm.get('email'); }
+
+  get age() { return this.myValidatedForm.get('age'); }
+
+  get password() { return this.myValidatedForm.get('password'); }
+
+  get accept() { return this.myValidatedForm.get('accept'); }
+
 }
 
 
