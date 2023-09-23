@@ -1,30 +1,39 @@
 <form [formGroup]="myValidatedForm" (submit)="sendForm()">
   <!-- Campos del formulario - Mensajes de Error por validación -->
-  <div>
+  <div class="field">
     <input type="text" formControlName="name" placeholder="Name" />
     <div *ngIf="name?.errors?.['required'] && name?.touched">
       <p>Name is required</p>
     </div>
   </div>
-  <div>
+  <div class="field">
     <input type="text" formControlName="surname" placeholder="Surname" />
   </div>
-  <div>
+  <div class="field">
     <input type="text" formControlName="email" placeholder="Email" />
     <div *ngIf="email?.errors?.['required'] && email?.touched">
       <p>Email is required</p>
     </div>
-    <div *ngIf="email?.errors?.['email'] && email?.touched">
-      <p>Email is not valid</p>
-    </div>
   </div>
-  <div>
+  <div class="field">
     <input type="number" formControlName="age" placeholder="Age" />
     <div *ngIf="age?.errors?.['required'] && age?.touched">
       <p>Age is required</p>
     </div>
-    <div *ngIf="age?.errors?.['min'] && age?.touched">
-      <p>Age must be greater than 18</p>
+  </div>
+  <div class="field">
+    <input type="password" formControlName="password" placeholder="Password" />
+    <div *ngIf="password?.errors?.['required'] && password?.touched">
+      <p>Password is required</p>
+    </div>
+  </div>
+  <div class="field">
+    <div [ngStyle]="{display: 'flex', alignItems: 'center', gap:'5px'}">
+      <input type="checkbox" formControlName="accept" [ngStyle]="{width:'15px'}"/>
+      <label for="accept">Accept terms and conditions</label>
+    </div>
+    <div *ngIf="accept?.errors?.['required'] && accept?.touched">
+      <p>Terms are required</p>
     </div>
   </div>
 

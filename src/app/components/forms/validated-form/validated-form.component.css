@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+
+
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background-color: #cf4545;
+  color: #fff;
+}
