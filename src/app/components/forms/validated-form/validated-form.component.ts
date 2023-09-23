@@ -19,6 +19,8 @@ export class ValidatedFormComponent implements OnInit {
       surname: '',
       email: ['', Validators.compose([Validators.required, Validators.email])],
       age: ['', Validators.compose([Validators.required, Validators.min(18), Validators.max(65)])],
+      password: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z]*')])],
+      accept: ['', Validators.requiredTrue]
     });
 
   }
