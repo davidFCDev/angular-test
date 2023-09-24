@@ -11,6 +11,8 @@ export class ExamplePipesComponent implements OnInit {
   dob: Date = new Date(1990, 5, 20);
   change: boolean = true;
   name: string = 'John Doe';
+  PI_NUMBER: number = Math.PI;
+  money: number = 1234.5;
   // Ejemplo para calcular puntos de un jugador
   player1: IPlayer = {
     name: 'John',

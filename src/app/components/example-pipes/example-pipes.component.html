@@ -15,6 +15,8 @@
   Change format to {{ !change ? "Short" : "Full" }}
 </button>
 
+<h2>Style Pipes</h2>
+<!-- Uppercase and Lowercase -->
 <p>Welcome {{ name | uppercase }}</p>
 <p>Welcome {{ name | lowercase }}</p>
 
@@ -23,3 +25,13 @@
 <p>{{ player1 | calculatePoints }}</p>
 <p>{{ player2 | calculatePoints }}</p>
 
+<!-- Decimales -->
+<h2>Decimal Pipes</h2>
+<p>Result: {{ PI_NUMBER | number : ".5-5" }}</p>
+<p>Result: {{ PI_NUMBER | number : "2.8" }}</p>
+
+<!-- Currency -->
+<h2>Currency Pipes</h2>
+<p>Result: {{ money | currency : "EUR" }}</p>
+<p>Result: {{ money | currency : "EUR" : "code" }}</p>
+<p>Result: {{ money | currency : "EUR" : "symbol" }}</p>
