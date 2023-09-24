@@ -11,7 +11,9 @@
 <p>My birthday is {{ dob | date : dateFormat }}</p>
 <p>My birthday is {{ dob | date : dateFormat | uppercase }}</p>
 <p>My birthday is {{ dob | date : dateFormat | lowercase }}</p>
-<button (click)="changeFormat()">Change format to {{ !change ? 'Short' : 'Full' }} </button>
+<button (click)="changeFormat()">
+  Change format to {{ !change ? "Short" : "Full" }}
+</button>
 
-
-
+<p>Welcome {{ name | uppercase }}</p>
+<p>Welcome {{ name | lowercase }}</p>
