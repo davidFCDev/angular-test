@@ -13,6 +13,7 @@ import { ValidatedFormComponent } from './components/forms/validated-form/valida
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ExamplePipesComponent } from './components/example-pipes/example-pipes.component';
 import { MultiplyPipe } from './pipes/multiply.pipe';
+import { CalculatePointsPipe } from './pipes/calculate-points.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MultiplyPipe } from './pipes/multiply.pipe';
     ValidatedFormComponent,
     ExamplePipesComponent,
     MultiplyPipe,
+    CalculatePointsPipe,
   ],
   imports: [
     BrowserModule,
