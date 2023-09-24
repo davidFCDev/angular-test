@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ValidatedFormComponent } from './components/forms/validated-form/validated-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ExamplePipesComponent } from './components/example-pipes/example-pipes.component';
+import { MultiplyPipe } from './pipes/multiply.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ExamplePipesComponent } from './components/example-pipes/example-pipes.
     ArrayFormComponent,
     ValidatedFormComponent,
     ExamplePipesComponent,
+    MultiplyPipe,
   ],
   imports: [
     BrowserModule,
