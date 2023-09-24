@@ -17,6 +17,9 @@ import { CalculatePointsPipe } from './pipes/calculate-points.pipe';
 import { registerLocaleData } from '@angular/common';
 import localeES from '@angular/common/locales/es';
 
+// Registramos el locale de ES para que los PIPES salgan en español
+registerLocaleData(localeES);
+
 @NgModule({
   declarations: [
     AppComponent,
