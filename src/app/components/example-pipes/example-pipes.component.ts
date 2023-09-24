@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPlayer } from '../../models/player.interface';
-
+import { IContact } from 'src/app/models/contact.interface';
 
 @Component({
   selector: 'app-example-pipes',
@@ -13,6 +13,14 @@ export class ExamplePipesComponent implements OnInit {
   name: string = 'John Doe';
   PI_NUMBER: number = Math.PI;
   money: number = 1234.5;
+  percentage: number = 0.234;
+  contact: IContact = {
+    id: 1,
+    name: 'John Doe',
+    surname: 'Doe',
+    age: 30,
+    email: 'jhon@gmail.com',
+  };
   // Ejemplo para calcular puntos de un jugador
   player1: IPlayer = {
     name: 'John',
@@ -22,7 +30,6 @@ export class ExamplePipesComponent implements OnInit {
     name: 'Jane',
     points: [34, 42, 50, 68, 70, 88, 98, 100],
   };
-
 
   constructor() {}
 
