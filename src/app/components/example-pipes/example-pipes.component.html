@@ -42,3 +42,9 @@
 <!-- Percent -->
 <h2>Percent Pipes</h2>
 <p>Result: {{ percentage | percent }}</p>
+<p>Result: {{ percentage | percent : "2.2" }}</p>
+
+<!-- Slice -->
+<h2>Slice Pipes</h2>
+<p>{{ longText | slice : 0 : 10 }}</p>
+<p>{{ longText | slice : 0 : 20 }}</p>

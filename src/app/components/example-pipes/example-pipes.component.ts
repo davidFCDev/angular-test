@@ -14,6 +14,7 @@ export class ExamplePipesComponent implements OnInit {
   PI_NUMBER: number = Math.PI;
   money: number = 1234.5;
   percentage: number = 0.234;
+  longText: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.';
   contact: IContact = {
     id: 1,
     name: 'John Doe',
