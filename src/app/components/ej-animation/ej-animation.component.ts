@@ -15,14 +15,24 @@ import {
   animations: [
     trigger('animaciones', [
       state('inicial', style({ backgroundColor: 'red' })),
-      state('final', style({ backgroundColor: 'blue' })),
+      state('final', style({ backgroundColor: 'orange' })),
       transition('inicial => final', animate('1000ms ease-in')),
       transition('final => inicial', animate('1000ms ease-out')),
     ]),
   ],
 })
 export class EjAnimationComponent implements OnInit {
+  state: string = 'inicial';
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    setInterval(() => {
+      if (this.state === 'inicial') {
+        this.state = 'final';
+      } else {
+        this.state = 'inicial';
+      }
+    }, 1000);
+  }
 }
