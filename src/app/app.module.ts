@@ -1,6 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { SaludoComponent } from './components/saludo/saludo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -41,6 +41,7 @@ registerLocaleData(localeES);
     HttpClientModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatButtonModule,
   ],
   providers: [
     // Registramos el locale de ES para que los PIPES salgan en español
