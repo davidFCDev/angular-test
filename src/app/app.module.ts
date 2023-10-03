@@ -16,6 +16,7 @@ import { MultiplyPipe } from './pipes/multiply.pipe';
 import { CalculatePointsPipe } from './pipes/calculate-points.pipe';
 import { registerLocaleData } from '@angular/common';
 import localeES from '@angular/common/locales/es';
+import { EjAnimationComponent } from './components/ej-animation/ej-animation.component';
 
 // Registramos el locale de ES para que los PIPES salgan en español
 registerLocaleData(localeES);
@@ -31,6 +32,7 @@ registerLocaleData(localeES);
     ExamplePipesComponent,
     MultiplyPipe,
     CalculatePointsPipe,
+    EjAnimationComponent,
   ],
   imports: [
     BrowserModule,
