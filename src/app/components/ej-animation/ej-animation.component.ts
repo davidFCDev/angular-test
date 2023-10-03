@@ -16,8 +16,8 @@ import {
     trigger('animaciones', [
       state('inicial', style({ backgroundColor: 'red' })),
       state('final', style({ backgroundColor: 'orange' })),
-      state('subiendo', style({ transform: 'translateY(-100%)' })),
-      state('bajando', style({ transform: 'translateY(100%)' })),
+      state('izquierda', style({ transform: 'translateX(-100%)' })),
+      state('derecha', style({ transform: 'translateX(100%)' })),
       transition('inicial => final', animate('1000ms ease-in')),
       transition('final => inicial', animate('1000ms ease-out')),
     ]),
@@ -38,11 +38,11 @@ export class EjAnimationComponent implements OnInit {
     }, 1000);
   }
 
-  subir() {
-    this.state = 'subiendo';
+  toTheLeft() {
+    this.state = 'izquierda';
   }
 
-  bajar() {
-    this.state = 'bajando';
+  toTheRight() {
+    this.state = 'derecha';
   }
 }
