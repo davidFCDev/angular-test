@@ -21,6 +21,12 @@ import {
       transition('inicial => final', animate('1000ms ease-in')),
       transition('final => inicial', animate('1000ms ease-out')),
     ]),
+    trigger('animacion2', [
+      state('small', style({ width: '1rem', height: '1rem' })),
+      state('big', style({ width: '600px', height: '600px' })),
+      transition('inicial => final', animate('2000ms ease-in')),
+      transition('final => inicial', animate('2000ms ease-out')),
+    ]),
   ],
 })
 export class EjAnimationComponent implements OnInit {
@@ -44,5 +50,13 @@ export class EjAnimationComponent implements OnInit {
 
   toTheRight() {
     this.state = 'derecha';
+  }
+
+  goBig() {
+    this.state = 'big';
+  }
+
+  goSmall() {
+    this.state = 'small';
   }
 }

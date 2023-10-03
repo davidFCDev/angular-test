@@ -4,17 +4,27 @@
       <h1>Ejemplo de animacion</h1>
     </div>
 
-    <div class="box-2">
+    <div class="box-2" [@animacion2]="state">
       <h1>Animacion 2</h1>
     </div>
   </div>
 
   <div [ngStyle]="{ display: 'flex', gap: '5px' }">
-    <button mat-raised-button color="primary" (click)="toTheLeft()">
-      Left
-    </button>
-    <button mat-raised-button color="primary" (click)="toTheRight()">
-      Right
-    </button>
+    <div [ngStyle]="{ display: 'flex', gap: '5px' }">
+      <button mat-raised-button color="primary" (click)="toTheLeft()">
+        Left
+      </button>
+      <button mat-raised-button color="primary" (click)="toTheRight()">
+        Right
+      </button>
+    </div>
+    <div [ngStyle]="{ display: 'flex', gap: '5px' }">
+      <button mat-raised-button color="primary" (click)="toTheLeft()">
+        Left
+      </button>
+      <button mat-raised-button color="primary" (click)="toTheRight()">
+        Right
+      </button>
+    </div>
   </div>
 </main>
