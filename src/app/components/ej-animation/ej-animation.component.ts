@@ -14,8 +14,8 @@ import {
   // Metadatos para animacion de componente
   animations: [
     trigger('animaciones', [
-      state('inicial', style({ backgroundColor: 'red' })),
-      state('final', style({ backgroundColor: 'orange' })),
+      state('inicial', style({ backgroundColor: 'blue' })),
+      state('final', style({ backgroundColor: 'red' })),
       state('izquierda', style({ transform: 'translateX(-100%)' })),
       state('derecha', style({ transform: 'translateX(100%)' })),
       transition('inicial => final', animate('1000ms ease-in')),

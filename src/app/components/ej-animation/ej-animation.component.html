@@ -1,6 +1,12 @@
 <main class="page">
-  <div class="box" [@animaciones]="state">
-    <h1>Ejemplo de animacion</h1>
+  <div [ngStyle]="{ display: 'flex', gap: '15rem', alignItems: 'center' }">
+    <div class="box" [@animaciones]="state">
+      <h1>Ejemplo de animacion</h1>
+    </div>
+
+    <div class="box-2">
+      <h1>Animacion 2</h1>
+    </div>
   </div>
 
   <div [ngStyle]="{ display: 'flex', gap: '5px' }">

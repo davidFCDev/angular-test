@@ -9,6 +9,21 @@
   color: white;
   font-weight: bold;
   font-size: larger;
+  border-radius: 100%;
+}
+
+.box-2 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  border-radius: 100%;
 }
 
 .page {
